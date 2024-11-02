@@ -6,5 +6,4 @@ reset:
 	jmp	reset	; Go back to the nop instruction
 
 .segment "RESET"
-	.word reset	; Go to the reset subroutine
-	.word $0000
+	.word	reset	; Go to the reset subroutine
