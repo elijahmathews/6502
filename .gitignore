@@ -8,3 +8,8 @@ schematics/
 # KiCad stuff
 6502-backups/
 fp-info-cache
+
+# Compiled things
+*.out
+*.o
+*.bin
