@@ -6,6 +6,8 @@ reset:
 	nop		; Don't actually do anything.
 	jmp	reset	; Go back to the NOP instruction.
 
+.include "math.s"	; Include math subroutines.
+
 .segment "RESET"	; Reset requires special handling.
 			; Execution starts at address stored
 			; at address FFFC.
