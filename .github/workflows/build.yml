@@ -18,3 +18,9 @@ jobs:
 
       - name: Build ROM image
         run: make
+
+      - name: Check ROM image exists
+        run: ROM1=rom1.bin && test -f $ROM1 && "File $ROM1 exists."
+
+      - name: Check ROM image is correct size
+        run: test "$(stat -c%s rom1.bin)" -eq 32768
