@@ -4,10 +4,15 @@ This is a repo containing code (and schematics and whatever) related to my [Ben 
 
 This project is currently pretty empty (as you can see), and I'm not entirely sure where I'll be taking this! I will likely begin this very similar to Ben Eater's 6502 computer, but I will likely try to make some alterations as I see fit.
 
-## Assembling
+## Building
 
-The code in this directory was written for the `ca65` assembler, part of the [`cc65`](https://cc65.github.io/) cross-development package. To assemble this code and link this code, you can then run this single line after cloning the repo:
+> [!IMPORTANT]
+> Building this code has only been tested in Fedora 41, but should work for most Linux distributions.
+
+All of the code in this repository was written for the `ca65` assembler and `ld65` linker, both part of the open-source [`cc65`](https://cc65.github.io/) cross-development package. Once you have this installed, building the code should be as simple as cloning the repo and running `make`:
 ```console
-$ ca65 src/*.s && ld65 -C src/memory.cfg -o /dev/null src/*.o
+$ git clone https://github.com/elijahmathews/6502.git
+$ cd 6502
+$ make
 ```
 You can then use a chip programmer (combined with a controller such as [Minipro](https://davidgriffith.gitlab.io/minipro/)) to write the output `rom1.bin` ROM image to a 28C256 ROM chip.
