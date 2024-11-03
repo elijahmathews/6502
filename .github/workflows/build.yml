@@ -1,0 +1,20 @@
+name: build
+
+on:
+  # Trigger on push or pull request.
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install cc65
+        run: sudo apt update && sudo apt install -y cc65
+
+      - name: Build ROM image
+        run: make
