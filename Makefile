@@ -12,4 +12,4 @@ rom1.bin: math.o main.o
 clean:
 	rm math.o
 	rm crt0.o
-	rm rom1.bin
+	rm firmware.bin 
