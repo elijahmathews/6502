@@ -7,7 +7,7 @@ main.o:
 	ca65 src/main.s -o main.o
 
 rom1.bin: math.o main.o
-	ld65 -C src/memory.cfg -o /dev/null math.o main.o
+	ld65 -C memory.cfg -o /dev/null math.o main.o
 
 clean:
 	rm math.o
